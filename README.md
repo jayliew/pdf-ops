@@ -3,7 +3,7 @@ PDF ops
 
 # TODO
 
-In `list_pdf_fields.pdf`: 
+## In `list_pdf_fields.pdf`: 
 
 Add fallback method of detecting field labels by spatial proximity. E.g. Use the widget's bounding box (widget.rect) to define a search area (e.g., to the left for horizontal labels). Then extract text from that area using page.get_textbox() for simple cases or page.get_text("words")/page.get_text("blocks") for more precision (filtering by intersection or distance). Adjust the search rectangle based on your PDF's layout—labels are often left-aligned or above fields.
 
@@ -37,3 +37,5 @@ for page in doc:
         print(f"Field: {field_name}, Visible Label: {label_text or 'None'}")
 doc.close()
 ```
+
+## After fields can be correctly identified and human readable, add functionality to fill out form fields without flattening
