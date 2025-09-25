@@ -9,7 +9,7 @@ Add fallback method of detecting field labels by spatial proximity. E.g. Use the
 
 E.g.
 
-<python>
+```python
 import fitz  # PyMuPDF
 
 doc = fitz.open("your_form.pdf")
@@ -36,4 +36,4 @@ for page in doc:
         
         print(f"Field: {field_name}, Visible Label: {label_text or 'None'}")
 doc.close()
-</python>
+```
